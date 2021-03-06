@@ -37,15 +37,23 @@ you shout when reading code](https://www.osnews.com/images/comics/wtfm.jpg)
 
 **بد:**
 
+</div>
+
 ```javascript
 const yyyymmdstr = moment().format("YYYY/MM/DD");
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const currentDate = moment().format("YYYY/MM/DD");
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -53,17 +61,25 @@ const currentDate = moment().format("YYYY/MM/DD");
 
 **بد:**
 
+</div>
+
 ```javascript
 getUserInfo();
 getClientData();
 getCustomerRecord();
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 getUser();
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -73,12 +89,18 @@ getUser();
 
 **بد:**
 
+</div>
+
 ```javascript
 // What the heck is 86400000 for?
 setTimeout(blastOff, 86400000);
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 // Declare them as capitalized named constants.
@@ -87,11 +109,15 @@ const MILLISECONDS_IN_A_DAY = 60 * 60 * 24 * 1000; //86400000;
 setTimeout(blastOff, MILLISECONDS_IN_A_DAY);
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از متغیرهای توضیحی استفاده کنید
 
 **بد:**
+
+</div>
 
 ```javascript
 const address = "One Infinite Loop, Cupertino 95014";
@@ -102,7 +128,11 @@ saveCityZipCode(
 );
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const address = "One Infinite Loop, Cupertino 95014";
@@ -111,6 +141,8 @@ const [_, city, zipCode] = address.match(cityZipCodeRegex) || [];
 saveCityZipCode(city, zipCode);
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از نگاشت ذهنی خودداری کنید
@@ -118,6 +150,8 @@ saveCityZipCode(city, zipCode);
 متغیرهای صریح بهتر از متغیرهای ضمنی است.
 
 **بد:**
+
+</div>
 
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
@@ -132,7 +166,11 @@ locations.forEach(l => {
 });
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
@@ -146,6 +184,8 @@ locations.forEach(location => {
 });
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### نیاز به تکرار نام شی در متغیرها نیست
@@ -153,6 +193,8 @@ locations.forEach(location => {
 برای نام گذاری اعضای یک کلاس نیاز به استفاده از نام کلاس در نام آن ها نیست.
 
 **بد:**
+
+</div>
 
 ```javascript
 const Car = {
@@ -166,7 +208,11 @@ function paintCar(car) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const Car = {
@@ -180,6 +226,8 @@ function paintCar(car) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### به جای اتصال کوتاه یا شرطی، از آرگومان های پیش فرض استفاده کنید
@@ -188,6 +236,8 @@ function paintCar(car) {
 
 **بد:**
 
+</div>
+
 ```javascript
 function createMicrobrewery(name) {
   const breweryName = name || "Hipster Brew Co.";
@@ -195,13 +245,19 @@ function createMicrobrewery(name) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function createMicrobrewery(name = "Hipster Brew Co.") {
   // ...
 }
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -224,6 +280,8 @@ function createMicrobrewery(name = "Hipster Brew Co.") {
 
 **بد:**
 
+</div>
+
 ```javascript
 function createMenu(title, body, buttonText, cancellable) {
   // ...
@@ -233,7 +291,11 @@ createMenu("Foo", "Bar", "Baz", true);
 
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function createMenu({ title, body, buttonText, cancellable }) {
@@ -248,6 +310,8 @@ createMenu({
 });
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### توابع باید یک کار را انجام دهند
@@ -255,6 +319,8 @@ createMenu({
 این مهمترین قانون در مهندسی نرم افزار است. وقتی توابع بیش از یک کار انجام می دهند، نوشتن، تست و استدلال آن ها دشوارتر است. وقتی می توانید یک تابع را فقط برای یک کار بنویسید، می توان به راحتی آنرا تغییر داد و کد شما بسیار تمیزتر خواهد شد. اگر از کل این راهنما فقط همین یک مورد را متوجه شوید شما از تعداد زیادی از توسعه دهندگان پیشی خواهید گرفت.
 
 **بد:**
+
+</div>
 
 ```javascript
 function emailClients(clients) {
@@ -267,7 +333,11 @@ function emailClients(clients) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function emailActiveClients(clients) {
@@ -280,11 +350,15 @@ function isActiveClient(client) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### نام تابع باید بگوید که چه کاری انجام می دهد
 
 **بد:**
+
+</div>
 
 ```javascript
 function addToDate(date, month) {
@@ -297,7 +371,11 @@ const date = new Date();
 addToDate(date, 1);
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function addMonthToDate(month, date) {
@@ -308,6 +386,8 @@ const date = new Date();
 addMonthToDate(1, date);
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### توابع فقط باید یک سطح انتزاع باشند
@@ -315,6 +395,8 @@ addMonthToDate(1, date);
 وقتی بیش از یک سطح انتزاع داشته باشید، تابع شما معمولاً بیش از حد استفاده می شود. تقسیم توابع منجر به استفاده مجدد و تست آسان تر می شود.
 
 **بد:**
+
+</div>
 
 ```javascript
 function parseBetterJSAlternative(code) {
@@ -341,7 +423,11 @@ function parseBetterJSAlternative(code) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function parseBetterJSAlternative(code) {
@@ -378,6 +464,8 @@ function parse(tokens) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### کد تکراری را حذف کنید
@@ -391,6 +479,8 @@ function parse(tokens) {
 درست گرفتن انتزاع بسیار مهم است، به همین دلیل باید از اصول SOLID مندرج در بخش Class ها پیروی کنید. انتزاعات بد ممکن است از کد تکراری بدتر باشد، بنابراین مراقب باشید! با گفتن این، اگر می توانید انتزاع خوبی انجام دهید، آن را انجام دهید! کدتان را مجددا تکرار نکنید، در غیر این صورت هر زمان که بخواهید یک چیز را تغییر دهید باید بخش های مختلفی را ویرایش کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 function showDeveloperList(developers) {
@@ -424,7 +514,11 @@ function showManagerList(managers) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function showEmployeeList(employees) {
@@ -451,11 +545,15 @@ function showEmployeeList(employees) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### اشیا پیش فرض را با Object.assign تنظیم کنید
 
 **بد:**
+
+</div>
 
 ```javascript
 const menuConfig = {
@@ -476,7 +574,11 @@ function createMenu(config) {
 createMenu(menuConfig);
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const menuConfig = {
@@ -504,6 +606,8 @@ function createMenu(config) {
 createMenu(menuConfig);
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از flagها به عنوان پارامترهای توابع استفاده نکنید
@@ -511,6 +615,8 @@ createMenu(menuConfig);
 flagها به کاربر شما می گویند که این تابع بیش از یک کار انجام می دهد. توابع باید یک کار انجام دهند. اگر توابع شما براساس کدهای boolean دنبال می شوند، توابع خود را تجزیه کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 function createFile(name, temp) {
@@ -522,7 +628,11 @@ function createFile(name, temp) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function createFile(name) {
@@ -534,6 +644,8 @@ function createTempFile(name) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از عوارض جانبی یا Side Effects خودداری کنید (بخش 1)
@@ -541,6 +653,8 @@ function createTempFile(name) {
 به جای اینکه مقدار یک تابع در یک متغیر global نوشته شود به صورت غیر void آنرا تعریف کنید و مقدار را برگردانید.
 
 **بد:**
+
+</div>
 
 ```javascript
 // Global variable referenced by following function.
@@ -556,7 +670,11 @@ splitIntoFirstAndLastName();
 console.log(name); // ['Ryan', 'McDermott'];
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function splitIntoFirstAndLastName(name) {
@@ -570,11 +688,15 @@ console.log(name); // 'Ryan McDermott';
 console.log(newName); // ['Ryan', 'McDermott'];
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از عوارض جانبی یا Side Effects خودداری کنید (بخش 2)
 
 در JavaScript برخی مقادیر غیر قابل تغییر (تغییرناپذیر) و برخی قابل تغییر (تغییر پذیر) هستند. اشیا و آرایه ها دو نوع مقادیر قابل تغییر هستند بنابراین مهم است که هنگام انتقال به عنوان پارامترهای یک تابع، آنها را با دقت کنترل کنید. یک تابع جاوا اسکریپت می تواند خصوصیات یک شی را تغییر دهد یا محتوای یک آرایه را تغییر دهد که به راحتی باعث اشکال در جای دیگر شود.
+
+</div>
 
 Two caveats to mention to this approach:
 
@@ -588,7 +710,11 @@ Two caveats to mention to this approach:
    this kind of programming approach to be fast and not as memory intensive as
    it would be for you to manually clone objects and arrays.
 
+<div dir="rtl">
+
 **بد:**
+
+</div>
 
 ```javascript
 const addItemToCart = (cart, item) => {
@@ -596,13 +722,19 @@ const addItemToCart = (cart, item) => {
 };
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const addItemToCart = (cart, item) => {
   return [...cart, { item, date: Date.now() }];
 };
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -614,6 +746,8 @@ const addItemToCart = (cart, item) => {
 
 **بد:**
 
+</div>
+
 ```javascript
 Array.prototype.diff = function diff(comparisonArray) {
   const hash = new Set(comparisonArray);
@@ -621,7 +755,11 @@ Array.prototype.diff = function diff(comparisonArray) {
 };
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class SuperArray extends Array {
@@ -632,6 +770,8 @@ class SuperArray extends Array {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### برنامه نویسی تابعی را ترجیح دهید
@@ -639,6 +779,8 @@ class SuperArray extends Array {
 جاوا اسکریپت مثل زبان Haskell یک زبان کاربردی نیست، اما یک زبان تابع محور است. زبان های تابعی می توانند تمیزتر و تست کردن آن ها آسان تر هم باشد. هر وقت می توانید این سبک برنامه نویسی را ترجیح دهید جاوااسکریپت را انتخاب کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 const programmerOutput = [
@@ -667,7 +809,11 @@ for (let i = 0; i < programmerOutput.length; i++) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const programmerOutput = [
@@ -695,11 +841,15 @@ const totalOutput = programmerOutput.reduce(
 );
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### کپسوله سازی دستورات شرطی
 
 **بد:**
+
+</div>
 
 ```javascript
 if (fsm.state === "fetching" && isEmpty(listNode)) {
@@ -707,7 +857,11 @@ if (fsm.state === "fetching" && isEmpty(listNode)) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function shouldShowSpinner(fsm, listNode) {
@@ -719,11 +873,15 @@ if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از شروط منفی استفاده نکنید
 
 **بد:**
+
+</div>
 
 ```javascript
 function isDOMNodeNotPresent(node) {
@@ -735,7 +893,11 @@ if (!isDOMNodeNotPresent(node)) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function isDOMNodePresent(node) {
@@ -747,6 +909,8 @@ if (isDOMNodePresent(node)) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از شرطی شدن اجتناب کنید
@@ -754,6 +918,8 @@ if (isDOMNodePresent(node)) {
 به نظر می رسد این یک کار غیرممکن است. با شنیدن این موضوع احتمالا همه ی برنامه نویسان عزیز می گویند “چگونه قرار است بدون `if` ، کاری انجام دهیم؟” پاسخ این است که شما می توانید برای رسیدن به همان کار در بسیاری از موارد از چند case استفاده کنید. سوال دوم معمولاً این است ، “خوب این عالی است اما چرا من می خواهم این کار را انجام دهم؟” پاسخ این است که مفهوم قبلی که در ارتباط با clean code خواندیم این است که یک تابع فقط باید یک کار واحد انجام دهد. وقتی کلاس ها و توابعی را دارید که دستور `if` دارند ، به خواننده ی کد خود می گویید عملکرد این بخش شما بیش از یک کار را انجام می دهد. به یاد داشته باشید ، فقط یک کار را باید انجام دهید.
 
 **بد:**
+
+</div>
 
 ```javascript
 class Airplane {
@@ -771,7 +937,11 @@ class Airplane {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class Airplane {
@@ -800,6 +970,8 @@ class Cessna extends Airplane {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از بررسی نوع خودداری کنید (بخش 1)
@@ -807,6 +979,8 @@ class Cessna extends Airplane {
 در زبان برنامه نویسی javascript بررسی نوع نداریم اگر برای این موضوع وسواس دارید باید با یک تابع استفاده کنید که بهتر است این کار را انجام ندهید. این موضوع که نوع خاصی برای متغیرهای جاوااسکریپت در نظر گرفته می شود گاهی خوب است و گاهی بد اگر نیاز به جلوگیری از این موضوع دارید باید از APIهای سازگار استفاده کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 function travelToTexas(vehicle) {
@@ -818,13 +992,19 @@ function travelToTexas(vehicle) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function travelToTexas(vehicle) {
   vehicle.move(this.currentLocation, new Location("texas"));
 }
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -833,6 +1013,8 @@ function travelToTexas(vehicle) {
 اگر با مقادیر موجود در زبان جاوااسکریپت مانند رشته ها و عدد های صحیح کار می کنید و نمی توانید از polymorphism استفاده کنید اما هنوز هم نیاز به بررسی نوع دارید ، باید از TypeScript استفاده کنید. این یک گزینه ی عالی برای جاوا اسکریپت در حالت معمول است، زیرا TypeScript را در یک syntax استاندارد JavaScript را برای شما فراهم می کند. مشکلی که در بررسی  دستی نوع ها در جاوا اسکریپت به وجود دارد این است که انجام آن به خوبی به توابع و کدهای اضافی احتیاج دارد به طوری که type-safety ساختگی شما خوانایی از دست رفته را جبران نمی کند. کدهای جاوا اسکریپت خود را تمیز نگه دارید، تست های خوبی بنویسید و آنها را تست کنید. در غیر این صورت با TypeScript که یک گزینه ی خوب می باشد همه ی این کارها را انجام دهید.
 
 **بد:**
+
+</div>
 
 ```javascript
 function combine(val1, val2) {
@@ -847,7 +1029,11 @@ function combine(val1, val2) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function combine(val1, val2) {
@@ -855,9 +1041,13 @@ function combine(val1, val2) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### بیش از حد بهینه نکنید
+
+</div>
 
 Modern browsers do a lot of optimization under-the-hood at runtime. A lot of
 times, if you are optimizing then you are just wasting your time. [There are good
@@ -865,9 +1055,13 @@ resources](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers)
 for seeing where optimization is lacking. Target those in the meantime, until
 they are fixed if they can be.
 
+<div dir="rtl">
+
 مرورگرهای مدرن هنگام اجرای کدها بهینه سازی زیادی را انجام می دهند. بسیاری از اوقات، اگر در حال بهینه سازی هستید، فقط وقت خود را تلف می کنید. منابع خوبی برای دیدن این بهینه سازی سازی ها وجود دارد که در [این لینک](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) می توانید آن ها را مطالعه کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 // On old browsers, each iteration with uncached `list.length` would be costly
@@ -877,13 +1071,19 @@ for (let i = 0, len = list.length; i < len; i++) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 for (let i = 0; i < list.length; i++) {
   // ...
 }
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -892,6 +1092,8 @@ for (let i = 0; i < list.length; i++) {
 کد مرده به همان اندازه ای که کدهای تکراری بد هستند نامناسب است. دلیلی برای عدم حذف کدهای مرده نیست و اگر کدی هیچ وقت فراخوانی نمی شود، از دستش خلاص شوید!
 
 **بد:**
+
+</div>
 
 ```javascript
 function oldRequestModule(url) {
@@ -906,7 +1108,11 @@ const req = newRequestModule;
 inventoryTracker("apples", req, "www.inventory-awesome.io");
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function newRequestModule(url) {
@@ -916,6 +1122,8 @@ function newRequestModule(url) {
 const req = newRequestModule;
 inventoryTracker("apples", req, "www.inventory-awesome.io");
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -933,6 +1141,8 @@ inventoryTracker("apples", req, "www.inventory-awesome.io");
 
 **بد:**
 
+</div>
+
 ```javascript
 function makeBankAccount() {
   // ...
@@ -947,7 +1157,11 @@ const account = makeBankAccount();
 account.balance = 100;
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function makeBankAccount() {
@@ -976,6 +1190,8 @@ const account = makeBankAccount();
 account.setBalance(100);
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### اعضای داخل اشیا را private کنید
@@ -983,6 +1199,8 @@ account.setBalance(100);
 این را می توان از طریق بستارها (برای ES5 و نسخه های پایین تر) داشت.
 
 **بد:**
+
+</div>
 
 ```javascript
 const Employee = function(name) {
@@ -999,7 +1217,11 @@ delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: undefined
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function makeEmployee(name) {
@@ -1016,6 +1238,8 @@ delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ## **کلاس ها**
@@ -1025,6 +1249,8 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 بدست آوردن تعاریف، ساختار و روش تعریف قابل خواندن برای کلاس های ES5 کلاسیک بسیار دشوار است. اگر به ارث بری نیاز دارید (و توجه داشته باشید که ممکن است این کار را نکنید) ، کلاس های ES2015 / ES6 را ترجیح دهید. با این وجود، تابع های کوچک را به کلاس ها ترجیح دهید تا زمانی که که به اشیا بزرگتر و پیچیده تری احتیاج داشته باشید.
 
 **بد:**
+
+</div>
 
 ```javascript
 const Animal = function(age) {
@@ -1064,7 +1290,11 @@ Human.prototype.constructor = Human;
 Human.prototype.speak = function speak() {};
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class Animal {
@@ -1100,6 +1330,8 @@ class Human extends Mammal {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### از متدهای زنجیره گذاری یا chaining استفاده کنید
@@ -1107,6 +1339,8 @@ class Human extends Mammal {
 این الگو در JavaScript بسیار مفید است و شما آن را در بسیاری از کتابخانه ها مانند jQuery و Lodash مشاهده می کنید. این کار به شما اجازه می دهد تا کد خوانا با حجم کمتری داشته باشید. به همین دلیل، می گوییم، از توابع زنجیره گذاری استفاده کنید و نگاهی به تمیز بودن کدهای خود بیندازید. در توابع کلاس خود به راحتی دستور `this`  را می توانید پایان هر کلاس بگذارید و زنجیره را برای هر متدهای کلاس بزرگتر کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 class Car {
@@ -1138,7 +1372,11 @@ car.setColor("pink");
 car.save();
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class Car {
@@ -1176,6 +1414,8 @@ class Car {
 const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### ترکیب را بر ارث بری ترجیح دهید
@@ -1183,6 +1423,8 @@ const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 ابتدا بهتر است کمی در ارتباط با [_Design Patterns_](https://en.wikipedia.org/wiki/Design_Patterns)ها بخوانید.
 
 **بد:**
+
+</div>
 
 ```javascript
 class Employee {
@@ -1206,7 +1448,11 @@ class EmployeeTaxData extends Employee {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class EmployeeTaxData {
@@ -1231,11 +1477,15 @@ class Employee {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ## **SOLID**
 
 SOLID مخففی است که توسط مایکل پرز برای پنج اصل اول به نام رابرت مارتین معرفی شده است، که به معنی پنج اصل اساسی برنامه نویسی و طراحی شی گرا است.
+
+</div>
 
 - S: Single Responsibility Principle (SRP)
 - O: Open/Closed Principle (OCP)
@@ -1243,11 +1493,15 @@ SOLID مخففی است که توسط مایکل پرز برای پنج اصل �
 - I: Interface Segregation Principle (ISP)
 - D: Dependency Inversion Principle (DIP)
 
+<div dir="rtl">
+
 ### Single Responsibility Principle یا SRP
 
 همانطور که در Clean Code بیان شد ، “هرگز نباید بیش از یک کار برای یک کلاس وجود داشته باشد”. بسته بندی کلاس هایی که قابلیت های زیادی دارند ، وسوسه انگیز است ، مانند زمانی که فقط اجازه دارید یک چمدان را در پرواز با خود حمل کنید. مسئله این است که کلاس شما از نظر مفهومی منسجم نخواهد بود و دلایل زیادی برای تغییر در آن ایجاد می کند. به حداقل رساندن تعداد دفعات لازم برای تغییر کلاس مهم است. این مهم است زیرا اگر کارایی بیش از حد در یک کلاس وجود دارد و شما بخشی از آن را اصلاح می کنید ، درک اینکه چگونه این امر بر سایر ماژول های وابسته در کد شما تأثیر می گذارد دشوار است.
 
 **بد:**
+
+</div>
 
 ```javascript
 class UserSettings {
@@ -1267,7 +1521,11 @@ class UserSettings {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class UserAuth {
@@ -1294,6 +1552,8 @@ class UserSettings {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### Open/Closed Principle یا OCP
@@ -1303,6 +1563,8 @@ class UserSettings {
 این به چه معناست؟ این اصل در اصل بیان می کند که شما باید به افرادی که کد شما را می خوانند اجازه دهید ویژگی های جدید را بدون تغییر کد موجود اضافه کنند.
 
 **بد:**
+
+</div>
 
 ```javascript
 class AjaxAdapter extends Adapter {
@@ -1346,7 +1608,11 @@ function makeHttpCall(url) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class AjaxAdapter extends Adapter {
@@ -1384,11 +1650,15 @@ class HttpRequester {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### Liskov Substitution Principle یا LSP
 
 **بد:**
+
+</div>
 
 ```javascript
 class Rectangle {
@@ -1443,7 +1713,11 @@ const rectangles = [new Rectangle(), new Rectangle(), new Square()];
 renderLargeRectangles(rectangles);
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class Shape {
@@ -1490,11 +1764,15 @@ const shapes = [new Rectangle(4, 5), new Rectangle(4, 5), new Square(5)];
 renderLargeShapes(shapes);
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### Interface Segregation Principle یا ISP
 
 **بد:**
+
+</div>
 
 ```javascript
 class DOMTraverser {
@@ -1520,7 +1798,11 @@ const $ = new DOMTraverser({
 });
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class DOMTraverser {
@@ -1554,6 +1836,8 @@ const $ = new DOMTraverser({
 });
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### Dependency Inversion Principle یا DIP
@@ -1564,6 +1848,8 @@ const $ = new DOMTraverser({
 - Abstractionها نباید به جزئیات بستگی داشته باشد. جزئیات باید به Abstractionها بستگی داشته باشد.
 
 **بد:**
+
+</div>
 
 ```javascript
 class InventoryRequester {
@@ -1596,7 +1882,11 @@ const inventoryTracker = new InventoryTracker(["apples", "bananas"]);
 inventoryTracker.requestItems();
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 class InventoryTracker {
@@ -1641,6 +1931,8 @@ const inventoryTracker = new InventoryTracker(
 inventoryTracker.requestItems();
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ## **تست کردن**
@@ -1650,6 +1942,8 @@ inventoryTracker.requestItems();
 ### مفهوم واحد در هر تست
 
 **بد:**
+
+</div>
 
 ```javascript
 import assert from "assert";
@@ -1673,7 +1967,11 @@ describe("MomentJS", () => {
 });
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 import assert from "assert";
@@ -1699,6 +1997,8 @@ describe("MomentJS", () => {
 });
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ## **همزمانی**
@@ -1708,6 +2008,8 @@ describe("MomentJS", () => {
 Callbacks اصلا کد تمیز نیست و باعث ایجاد تو در تویی بیش از حد می شود. با ES2015  و ES6 می توانید که نوع built-in عمومی یا GLOBAL دارید؛ از آن استفاده کنید 🙂
 
 **بد:**
+
+</div>
 
 ```javascript
 import { get } from "request";
@@ -1731,7 +2033,11 @@ get(
 );
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 import { get } from "request-promise";
@@ -1748,6 +2054,8 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
     console.error(err);
   });
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -1757,6 +2065,8 @@ Promisesها یک گزینه ی بسیار تمیز برای callbacksها هس�
 
 **بد:**
 
+</div>
+
 ```javascript
 import { get } from "request-promise";
 import { writeFile } from "fs-extra";
@@ -1773,7 +2083,11 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
   });
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 import { get } from "request-promise";
@@ -1794,6 +2108,8 @@ async function getCleanCodeArticle() {
 getCleanCodeArticle()
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ## **مدیریت خطا**
@@ -1806,6 +2122,8 @@ getCleanCodeArticle()
 
 **بد:**
 
+</div>
+
 ```javascript
 try {
   functionThatMightThrow();
@@ -1814,7 +2132,11 @@ try {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 try {
@@ -1830,11 +2152,15 @@ try {
 }
 ```
 
+<div dir="rtl">
+
 ### promisesهای رد شده را نادیده نگیرید
 
 به همین دلیل نباید از caught errors با `try / catch` چشم پوشی کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 getdata()
@@ -1846,7 +2172,11 @@ getdata()
   });
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 getdata()
@@ -1864,6 +2194,8 @@ getdata()
   });
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ## **قالب بندی**
@@ -1877,6 +2209,8 @@ getdata()
 جاوا اسکریپت دارای نوع های مختلف نیست، بنابراین بزرگ نویسی در مورد متغیرها، توابع و … چیزهای زیادی به شما می گوید. این قوانین ذهنی هستند، بنابراین تیم شما می تواند هر آنچه را که می خواهد انتخاب کند. نکته این است، مهم نیست که همه شما چه چیزی را انتخاب می کنید، فقط باید در این موضوع ثابت قدم باشید.
 
 **بد:**
+
+</div>
 
 ```javascript
 const DAYS_IN_WEEK = 7;
@@ -1892,7 +2226,11 @@ class animal {}
 class Alpaca {}
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 const DAYS_IN_WEEK = 7;
@@ -1908,6 +2246,8 @@ class Animal {}
 class Alpaca {}
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت به بالا](#table-of-contents)**
 
 ### توابع تماس گیرنده ها (callers) و تماس گیرنده ها (callees) باید نزدیک باشند
@@ -1916,6 +2256,8 @@ class Alpaca {}
 
 **بد:**
 
+</div>
+
 ```javascript
 class PerformanceReview {
   constructor(employee) {
@@ -1953,9 +2295,13 @@ class PerformanceReview {
 const review = new PerformanceReview(employee);
 review.perfReview();
 ```
+
+<div dir="rtl">
 
 **خوب:**
 
+</div>
+
 ```javascript
 class PerformanceReview {
   constructor(employee) {
@@ -1993,6 +2339,8 @@ class PerformanceReview {
 const review = new PerformanceReview(employee);
 review.perfReview();
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -2003,6 +2351,8 @@ review.perfReview();
 نظرات یک موضوع دلخواه است، نه یک الزام. یک کد خوب بیشتر دارای داکیومنت خوب است نه کامنت های زیاد و کامل در بین برنامه.
 
 **بد:**
+
+</div>
 
 ```javascript
 function hashIt(data) {
@@ -2024,7 +2374,11 @@ function hashIt(data) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function hashIt(data) {
@@ -2041,6 +2395,8 @@ function hashIt(data) {
 }
 ```
 
+<div dir="rtl">
+
 **[⬆ برگشت های بالا](#table-of-contents)**
 
 ### کد خارج از کامنت را در پایگاه کد خود رها نکنید
@@ -2049,6 +2405,8 @@ Version control به یک دلیل وجود دارد که کد قدیمی را �
 
 **بد:**
 
+</div>
+
 ```javascript
 doStuff();
 // doOtherStuff();
@@ -2056,11 +2414,17 @@ doStuff();
 // doSoMuchStuff();
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 doStuff();
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -2069,6 +2433,8 @@ doStuff();
 به یاد داشته باشید که از version control استفاده کنید! با همین موضوع دیگر نیازی به کد مرده، کامنت های طولانی نیست. برای به دست آوردن تاریخچه ی فعالیت های خود از `git log` استفاده کنید!
 
 **بد:**
+
+</div>
 
 ```javascript
 /**
@@ -2082,13 +2448,19 @@ function combine(a, b) {
 }
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 function combine(a, b) {
   return a + b;
 }
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
@@ -2097,6 +2469,8 @@ function combine(a, b) {
 به جای نشانگرهای طولانی که با کاراکترهای خاص در کامنت ها می گذارید از indentها و فرورفتگی ها و از قالب ها استفاده کنید.
 
 **بد:**
+
+</div>
 
 ```javascript
 ////////////////////////////////////////////////////////////////////////////////
@@ -2115,7 +2489,11 @@ const actions = function() {
 };
 ```
 
+<div dir="rtl">
+
 **خوب:**
+
+</div>
 
 ```javascript
 $scope.model = {
@@ -2127,6 +2505,8 @@ const actions = function() {
   // ...
 };
 ```
+
+<div dir="rtl">
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
